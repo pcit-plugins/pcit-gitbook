@@ -1,0 +1,59 @@
+{
+  "author": "khs1994.com",
+  "description": "khs1994.com",
+  "language": "zh-hans",
+  "links": {
+    "sidebar": {
+      "Home": "//www.khs1994.com/more"
+    }
+  },
+  "plugins": [
+    "-sharing",
+    "-highlight",
+    "-livereload",
+    "toggle-chapters",
+    "tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git",
+    "prism",
+    "anchor-navigation-ex",
+    "favicon",
+    "expandable-chapters"
+  ],
+  "pluginsConfig": {
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "&copy 2017 khs1994.com",
+      "modify_label": "修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "anchor-navigation-ex": {
+      "showLevel": true,
+      "associatedWithSummary": false,
+      "mode": "pageTop",
+      "float": {
+        "showLevelIcon": false,
+        "level1Icon": "fa fa-hand-o-right",
+        "level2Icon": "fa fa-hand-o-right",
+        "level3Icon": "fa fa-hand-o-right"
+      },
+      "pageTop": {
+        "showLevelIcon": false,
+        "level1Icon": "fa fa-hand-o-right",
+        "level2Icon": "fa fa-hand-o-right",
+        "level3Icon": "fa fa-hand-o-right"
+      }
+    },
+    "favicon": {
+      "shortcut": "docs_images/favicon.ico",
+      "bookmark": "docs_images/favicon.ico",
+      "appleTouch": "docs_images/apple-touch-icon.png",
+      "appleTouchMore": {
+        "120x120": "docs_images/apple-touch-icon-120x120.png",
+        "180x180": "docs_images/apple-touch-icon-180x180.png"
+      }
+    }
+  }
+}
