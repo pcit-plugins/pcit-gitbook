@@ -1,6 +1,6 @@
 # Version latest
 
-FROM node:8-alpine
+FROM node:9-alpine
 
 LABEL maintainer="khs1994@khs1994.com" \
       version="0.0.1"

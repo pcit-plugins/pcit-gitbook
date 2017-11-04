@@ -35,6 +35,12 @@ $ cd < gitbook-src folder >
 $ docker run -it --rm \
     -v $PWD:/tmp/gitbook-src \
     khs1994/gitbook
+
+# or Server
+$ docker run -it --rm \
+    -v $PWD:/tmp/gitbook-src \
+    khs1994/gitbook
+    server
 ```
 
 # Build

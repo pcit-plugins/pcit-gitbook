@@ -1,8 +1,9 @@
 version: "3.3"
 services:
+  
   latest:
     build: ./mainline
-    image: khs1994/gitbook:${TAG}
+    image: khs1994/gitbook:latest
   1.0.0:
     build: ./multiple
     image: khs1994/gitbook:1.0.0
