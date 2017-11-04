@@ -39,7 +39,7 @@ $ docker run -it --rm \
 # or Server
 $ docker run -it --rm \
     -v $PWD:/tmp/gitbook-src \
-    khs1994/gitbook
+    khs1994/gitbook \
     server
 ```
 
