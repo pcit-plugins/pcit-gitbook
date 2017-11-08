@@ -2,8 +2,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
-* [`latest` (*mainline/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/mainline)
-* [`1.0.0` (*multiple/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/multiple)
+* [`latest` (*alpine/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/alpine)
 
 # 目的
 
@@ -17,39 +16,26 @@
 
 * 基于 `book.json` 完全可以构建自己的镜像
 
-* 由于 Dockerfile CMD 只能运行一条命令，CMD 改为运行脚本，主要完成 `node_modules` 的复制
-
-## Version
-
-* `latest` 最基本的插件（用于技术文档）
-
-* `1.0.0` 丰富的插件（自用）
-
 # Usage
 
+进入 gitbook 源文件夹
+
+## build
+
 ```bash
-# 进入 gitbook 源文件夹
-
-$ cd < gitbook-src folder >
-
 $ docker run -it --rm \
-    -v $PWD:/tmp/gitbook-src \
+    -v $PWD:/srv/gitbook-src \
     khs1994/gitbook
-
-# or Server
-$ docker run -it --rm \
-    -v $PWD:/tmp/gitbook-src \
-    khs1994/gitbook
-    server
 ```
 
-# Build
-
-You can build your Docker Image in your PC or Server with your Dockerfile.
+## Server
 
 ```bash
-$ git clone git@github.com:khs1994-docker/gitbook.git
-$ docker-compose build
+$ docker run -it --rm \
+    -v $PWD:/srv/gitbook-src \
+    -p 4000:4000 \
+    khs1994/gitbook \
+    server
 ```
 
 # More Information

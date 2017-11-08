@@ -1,9 +1,6 @@
-version: "3.3"
+version: "3.4"
 services:
-  
-  latest:
-    build: ./mainline
+
+  gitbook:
+    build: ./alpine
     image: khs1994/gitbook:latest
-  1.0.0:
-    build: ./multiple
-    image: khs1994/gitbook:1.0.0
