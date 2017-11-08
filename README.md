@@ -2,8 +2,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
-* [`latest` (*mainline/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/mainline)
-* [`1.0.0` (*multiple/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/multiple)
+* [`latest` (*mainline/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/alpine)
 
 # 目的
 
@@ -16,14 +15,6 @@
 * 本镜像主要完成 `GitBook` 及其插件的安装，具体请查看 `book.json` 文件
 
 * 基于 `book.json` 完全可以构建自己的镜像
-
-* 由于 Dockerfile CMD 只能运行一条命令，CMD 改为运行脚本，主要完成 `node_modules` 的复制
-
-## Version
-
-* `latest` 最基本的插件（用于技术文档）
-
-* `1.0.0` 丰富的插件（自用）
 
 # Usage
 
@@ -39,6 +30,7 @@ $ docker run -it --rm \
 # or Server
 $ docker run -it --rm \
     -v $PWD:/tmp/gitbook-src \
+    -p 4000:4000 \
     khs1994/gitbook \
     server
 ```
