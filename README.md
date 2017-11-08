@@ -2,7 +2,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
-* [`latest` (*mainline/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/alpine)
+* [`latest` (*alpine/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/alpine)
 
 # 目的
 
@@ -18,30 +18,24 @@
 
 # Usage
 
+进入 gitbook 源文件夹
+
+## build
+
 ```bash
-# 进入 gitbook 源文件夹
-
-$ cd < gitbook-src folder >
-
 $ docker run -it --rm \
-    -v $PWD:/tmp/gitbook-src \
+    -v $PWD:/srv/gitbook-src \
     khs1994/gitbook
+```
 
-# or Server
+## Server
+
+```bash
 $ docker run -it --rm \
-    -v $PWD:/tmp/gitbook-src \
+    -v $PWD:/srv/gitbook-src \
     -p 4000:4000 \
     khs1994/gitbook \
     server
-```
-
-# Build
-
-You can build your Docker Image in your PC or Server with your Dockerfile.
-
-```bash
-$ git clone git@github.com:khs1994-docker/gitbook.git
-$ docker-compose build
 ```
 
 # More Information

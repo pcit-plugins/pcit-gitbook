@@ -14,6 +14,7 @@ main(){
   case $1 in
     server )
       gitbook serve
+      exit 0
       ;;
     deploy )
       gitbook build
@@ -33,6 +34,7 @@ main(){
       gitbook build
       ;;
     esac
+    cp -a _book ../gitbook-src
     echo $START
     date "+%F %T"
 }

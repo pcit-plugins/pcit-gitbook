@@ -5,7 +5,7 @@ ENV TZ=Asia/Shanghai
 LABEL maintainer="khs1994@khs1994.com" \
       version="latest"
 
-WORKDIR /tmp/gitbook
+WORKDIR /srv/gitbook
 
 COPY book.json book.json
 
@@ -16,14 +16,14 @@ RUN apk add --no-cache \
           git \
       && npm install -g gitbook-cli \
       && gitbook install \
-      && ln -s usr/local/bin/docker-entrypoint.sh / \
+      && ln -s /usr/local/bin/docker-entrypoint.sh / \
       && rm -rf /root/.npm /tmp/*
 
 EXPOSE 4000
 
-VOLUME /tmp/gitbook-src
+VOLUME /srv/gitbook-src
 
-WORKDIR /tmp/gitbook-src
+WORKDIR /srv/gitbook-src
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
