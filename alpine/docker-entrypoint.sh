@@ -11,13 +11,14 @@ cp -a . ../gitbook
 cd ../gitbook
 
 main(){
+  gitbook build
+  cp -a _book ../gitbook-src
   case $1 in
     server )
       gitbook serve
       exit 0
       ;;
     deploy )
-      gitbook build
       cd _book
       git init
       git remote add origin ${GIT_REPO}
@@ -30,11 +31,7 @@ main(){
         git push -f master:${BRANCH}
       fi
       ;;
-    * )
-      gitbook build
-      ;;
     esac
-    cp -a _book ../gitbook-src
     echo $START
     date "+%F %T"
 }
