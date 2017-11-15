@@ -20,7 +20,7 @@
 
 进入 gitbook 源文件夹
 
-## build
+## Build
 
 ```bash
 $ docker run -it --rm \
@@ -41,5 +41,3 @@ $ docker run -it --rm \
 # More Information
 
 * [Changelog](https://github.com/khs1994-website/docker-gitbook/blob/master/Changelog.md)
-* [Docker Hub](https://hub.docker.com/r/khs1994/gitbook)
-* [Docker Store](https://store.docker.com/community/images/khs1994/gitbook/)

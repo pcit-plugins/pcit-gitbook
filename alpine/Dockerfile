@@ -14,6 +14,10 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN apk add --no-cache \
           tzdata \
           git \
+          openssl \
+          openssh \
+      && mkdir -p ~/.ssh \
+      && echo -e "StrictHostKeyChecking no\nUserKnownHostsFile /dev/null" > ~/.ssh/config \
       && npm install -g gitbook-cli \
       && gitbook install \
       && ln -s /usr/local/bin/docker-entrypoint.sh / \
