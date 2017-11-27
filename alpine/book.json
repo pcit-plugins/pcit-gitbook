@@ -11,12 +11,10 @@
     "-sharing",
     "-highlight",
     "-livereload",
-    "toggle-chapters",
     "tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git",
     "prism",
-    "anchor-navigation-ex",
-    "favicon",
-    "expandable-chapters"
+    "page-treeview",
+    "favicon"
   ],
   "pluginsConfig": {
     "prism": {
@@ -29,30 +27,18 @@
       "modify_label": "修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
-    "anchor-navigation-ex": {
-      "showLevel": true,
-      "associatedWithSummary": false,
-      "mode": "pageTop",
-      "float": {
-        "showLevelIcon": false,
-        "level1Icon": "fa fa-hand-o-right",
-        "level2Icon": "fa fa-hand-o-right",
-        "level3Icon": "fa fa-hand-o-right"
-      },
-      "pageTop": {
-        "showLevelIcon": false,
-        "level1Icon": "fa fa-hand-o-right",
-        "level2Icon": "fa fa-hand-o-right",
-        "level3Icon": "fa fa-hand-o-right"
-      }
+    "page-treeview": {
+      "copyright": "Copyright &#169; khs1994.com",
+      "minHeaderCount": "2",
+      "minHeaderDeep": "2"
     },
     "favicon": {
-      "shortcut": "docs_images/favicon.ico",
-      "bookmark": "docs_images/favicon.ico",
-      "appleTouch": "docs_images/apple-touch-icon.png",
+      "shortcut": "favicon.ico",
+      "bookmark": "favicon.ico",
+      "appleTouch": "favicon.ico",
       "appleTouchMore": {
-        "120x120": "docs_images/apple-touch-icon-120x120.png",
-        "180x180": "docs_images/apple-touch-icon-180x180.png"
+        "120x120": "favicon.ico",
+        "180x180": "favicon.ico"
       }
     }
   }
