@@ -3,6 +3,7 @@
 START=`date "+%F %T"`
 
 if [ $1 = "sh" ];then sh ; exit 0; fi
+if [ $1 = "version" ];then gitbook --version ; exit 0; fi
 
 rm -rf node_modules _book
 
