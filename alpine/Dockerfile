@@ -9,13 +9,11 @@ WORKDIR /srv/gitbook
 
 COPY book.json book.json
 
-COPY docker-entrypoint.sh /usr/local/bin/
-
 RUN apk add --no-cache \
           tzdata \
           git \
           openssl \
-          openssh \
+          openssh-client \
       && mkdir -p ~/.ssh \
       && echo -e "StrictHostKeyChecking no\nUserKnownHostsFile /dev/null" > ~/.ssh/config \
       && npm install -g gitbook-cli \
@@ -28,6 +26,8 @@ EXPOSE 4000
 VOLUME /srv/gitbook-src
 
 WORKDIR /srv/gitbook-src
+
+COPY docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
