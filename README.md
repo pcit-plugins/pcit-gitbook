@@ -38,6 +38,19 @@ $ docker run -it --rm \
     server
 ```
 
+## Deploy
+
+```bash
+$ docker run -it --rm \
+    -v $PWD:/srv/gitbook-src \
+    -v ~/.ssh:/root/.ssh \
+    -v ~/.gitconfig:/root/.gitconfig \
+    -e GIT_REPO=git@github.com:username/repo.git \
+    -e BRANCH=master \
+    khs1994/gitbook \
+    deploy
+```
+
 # More Information
 
 * [Changelog](https://github.com/khs1994-website/docker-gitbook/blob/master/Changelog.md)

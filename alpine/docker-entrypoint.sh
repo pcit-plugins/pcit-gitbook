@@ -27,9 +27,9 @@ main(){
       COMMIT=`date "+%F %T"`
       git commit -m "${COMMIT}"
       if [ -z ${BRANCH} ];then
-        git push -f master
+        git push -f origin master
       else
-        git push -f master:${BRANCH}
+        git push -f origin master:${BRANCH}
       fi
       ;;
     esac
