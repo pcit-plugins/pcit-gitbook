@@ -1,8 +1,10 @@
+# GitBook Docker
+
 [![GitHub stars](https://img.shields.io/github/stars/khs1994-docker/gitbook.svg?style=social&label=Stars)](https://github.com/khs1994-docker/gitbook) [![Docker Stars](https://img.shields.io/docker/stars/khs1994/gitbook.svg)](https://store.docker.com/community/images/khs1994/gitbook/) [![Docker Pulls](https://img.shields.io/docker/pulls/khs1994/gitbook.svg)](https://store.docker.com/community/images/khs1994/gitbook/)
 
 # Supported tags and respective `Dockerfile` links
 
-* [`latest` (*alpine/Dockerfile*)](https://github.com/khs1994-website/docker-gitbook/tree/master/alpine)
+* [`latest` (*alpine/Dockerfile*)](https://github.com/khs1994-docker/gitbook/tree/master/alpine/Dockerfile)
 
 # 目的
 
@@ -53,4 +55,4 @@ $ docker run -it --rm \
 
 # More Information
 
-* [Changelog](https://github.com/khs1994-website/docker-gitbook/blob/master/Changelog.md)
+* [Changelog](https://github.com/khs1994-docker/gitbook/blob/master/Changelog.md)
