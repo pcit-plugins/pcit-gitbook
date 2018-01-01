@@ -16,7 +16,7 @@ main(){
   cp -a _book ../gitbook-src
   case $1 in
     server )
-      gitbook serve
+      exec gitbook serve
       exit 0
       ;;
     deploy )
