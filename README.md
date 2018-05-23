@@ -52,7 +52,3 @@ $ docker run -it --rm \
     khs1994/gitbook \
     deploy
 ```
-
-# More Information
-
-* [Changelog](https://github.com/khs1994-docker/gitbook/blob/master/Changelog.md)
