@@ -2,8 +2,8 @@
 
 START=`date "+%F %T"`
 
-if [ $1 = "sh" ];then sh ; exit 0; fi
-if [ $1 = "version" ];then gitbook --version ; exit 0; fi
+if [ $1 = "sh" ];then sh ; exit 0 ; fi
+if [ $1 = "version" ];then exec gitbook --version ; fi
 
 rm -rf node_modules _book
 
@@ -37,4 +37,4 @@ main(){
     date "+%F %T"
 }
 
-main $1 $2 $3
+main $@
