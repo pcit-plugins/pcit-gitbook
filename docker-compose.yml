@@ -3,4 +3,4 @@ services:
 
   gitbook:
     build: ./alpine
-    image: khs1994/gitbook:latest@sha256:a8d941eab206af4fa4444fda2e66a58a45a1f9e10199c823344d48be6076a159
+    image: khs1994/gitbook:latest@sha256:5169216d2527d1a638592247587ca5253ac268bbb4d701ad633ccc32e81e1dba
