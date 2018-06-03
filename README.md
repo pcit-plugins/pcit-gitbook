@@ -46,9 +46,14 @@ $ docker run -it --rm \
 $ docker run -it --rm \
     -v $PWD:/srv/gitbook-src \
     -v ~/.ssh:/root/.ssh \
-    -v ~/.gitconfig:/root/.gitconfig \
+    -e GIT_USERNAME=username \
+    -e GIT_USEREMAIL=username@domain.com \
     -e GIT_REPO=git@github.com:username/repo.git \
-    -e BRANCH=master \
+    -e GIT_BRANCH=master \
     khs1994/gitbook \
     deploy
 ```
+
+# Who use this image ?
+
+* [KhsCI](https://github.com/khs1994-php/khsci/blob/master/yml_examples/gitbook.yml)

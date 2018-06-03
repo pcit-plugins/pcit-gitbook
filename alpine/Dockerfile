@@ -1,9 +1,12 @@
 FROM node:9-alpine@sha256:e9742137d0a73a0d2197363a04bf8e42c0e297a5c7ab1d0f43d735afca48bf9a
 
-ENV TZ=Asia/Shanghai
-
 LABEL maintainer="khs1994@khs1994.com" \
       version="latest"
+
+ENV TZ=Asia/Shanghai
+
+ENV GIT_USERNAME \
+    GIT_USEREMAIL
 
 WORKDIR /srv/gitbook
 
