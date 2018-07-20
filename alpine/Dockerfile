@@ -1,4 +1,4 @@
-FROM node:9-alpine@sha256:e9742137d0a73a0d2197363a04bf8e42c0e297a5c7ab1d0f43d735afca48bf9a
+FROM node:9-alpine@sha256:5aa0756284c7f0222c2c16988fb58d6446427ac7ae8891aa50a2de721ef4191c
 
 LABEL maintainer="khs1994@khs1994.com" \
       version="latest"
