@@ -5,9 +5,9 @@ START=`date "+%F %T"`
 if [ $1 = "sh" ];then sh ; exit 0 ; fi
 if [ $1 = "version" ];then exec gitbook --version ; fi
 
-git config -g user.name ${GIT_USERNAME:-none}
+git config --global user.name ${GIT_USERNAME:-none}
 
-git config -g user.email ${GIT_USEREMAIL:-none@none.com}
+git config --global user.email ${GIT_USEREMAIL:-none@none.com}
 
 rm -rf node_modules _book
 
