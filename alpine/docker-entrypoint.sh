@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 START=`date "+%F %T"`
 
 if [ $1 = "sh" ];then sh ; exit 0 ; fi
@@ -16,7 +18,8 @@ cp -a . ../gitbook
 cd ../gitbook
 
 main(){
-  gitbook build
+  gitbook build || ( gitbook install ; gitbook build )
+
   cp -a _book ../gitbook-src
   case $1 in
     server )
@@ -24,6 +27,16 @@ main(){
       exit 0
       ;;
     deploy )
+      set +x
+
+      echo ""
+      echo "==> check github actions ..."
+      echo ""
+
+      test -n "$GITHUB_ACTION" && \
+      GIT_REPO="https://${GIT_USERNAME}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+      set -x
+
       cd _book
       git init
       git remote add origin ${GIT_REPO}

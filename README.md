@@ -16,7 +16,7 @@
 
 * 本镜像主要完成 `GitBook` 及其插件的安装，具体请查看 `book.json` 文件
 
-* 基于 `book.json` 完全可以构建自己的镜像
+* 基于 `book.json` 可以构建自己的镜像
 
 # Usage
 
@@ -54,6 +54,14 @@ $ docker run -it --rm \
     deploy
 ```
 
+## Ations
+
+* https://developer.github.com/actions/
+
+```bash
+
+```
+
 # Who use this image ?
 
-* [KhsCI](https://github.com/khs1994-php/khsci/blob/master/yml_examples/gitbook.yml)
+* [PCIT](https://github.com/pcit-ce/pcit/blob/master/pcit_examples/gitbook.yml)

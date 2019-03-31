@@ -1,18 +1,26 @@
-FROM node:10-alpine
+FROM node:11-alpine
 
-LABEL maintainer="khs1994@khs1994.com" \
-      version="latest"
+LABEL maintainer="khs1994@khs1994.com"
+LABEL repository="https://github.com/khs1994-docker/gitbook"
+LABEL homepage="https://ci.khs1994.com"
+
+LABEL com.github.actions.name="pcit-gitbook"
+LABEL com.github.actions.description="build or deplay your gitbook"
+LABEL com.github.actions.icon="book-open"
+LABEL com.github.actions.color="white"
 
 ENV TZ=Asia/Shanghai
 
-ENV GIT_USERNAME \
-    GIT_USEREMAIL
+ENV GIT_USERNAME="" \
+    GIT_USEREMAIL="" \
+    GIT_REPO="" \
+    GIT_BRANCH=""
 
 WORKDIR /srv/gitbook
 
 COPY book.json book.json
 
-RUN apk add --no-cache \
+RUN set -x && apk add --no-cache \
           tzdata \
           git \
           openssl \
@@ -21,8 +29,8 @@ RUN apk add --no-cache \
       && echo -e "StrictHostKeyChecking no\nUserKnownHostsFile /dev/null" > ~/.ssh/config \
       && npm install -g gitbook-cli \
       && gitbook install \
-      && ln -s /usr/local/bin/docker-entrypoint.sh / \
-      && rm -rf /root/.npm /tmp/*
+      && rm -rf /root/.npm /tmp/* \
+      && gitbook ls
 
 EXPOSE 4000
 
