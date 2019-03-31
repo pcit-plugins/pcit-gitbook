@@ -14,7 +14,8 @@ ENV TZ=Asia/Shanghai
 ENV GIT_USERNAME="" \
     GIT_USEREMAIL="" \
     GIT_REPO="" \
-    GIT_BRANCH=""
+    GIT_BRANCH="gh-pages" \
+    GIT_COMMIT_MESSAGE="Gitbook updated:"
 
 WORKDIR /srv/gitbook
 

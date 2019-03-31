@@ -41,13 +41,9 @@ main(){
       git init
       git remote add origin ${GIT_REPO}
       git add .
-      COMMIT=`date "+%F %T"`
-      git commit -m "${COMMIT}"
-      if [ -z ${BRANCH} ];then
-        git push -f origin master
-      else
-        git push -f origin master:${BRANCH}
-      fi
+      COMMIT_DATE=`date "+%F %T"`
+      git commit -m "${GIT_COMMIT_MESSAGE:-Gitbook updated:} ${COMMIT_DATE}"
+      git push -f origin master:${GIT_BRANCH:-gh-pages}
       ;;
     esac
     echo $START
