@@ -13,9 +13,9 @@ git config --global user.email ${GIT_USEREMAIL:-none@none.com}
 
 rm -rf node_modules _book
 
-cp -a . ../gitbook
+cp -a . /srv/gitbook
 
-cd ../gitbook
+cd /srv/gitbook
 
 main(){
   gitbook build || ( gitbook install ; gitbook build )
