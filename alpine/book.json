@@ -14,7 +14,7 @@
     "-livereload",
     "tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git",
     "prism",
-    "page-treeview",
+    "page-treeview@2.9.8",
     "favicon"
   ],
   "pluginsConfig": {
