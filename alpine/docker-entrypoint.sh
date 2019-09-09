@@ -13,6 +13,8 @@ git config --global user.email ${GIT_USEREMAIL:-none@none.com}
 
 rm -rf node_modules _book
 
+WORKDIR=$PWD
+
 cp -a . /srv/gitbook
 
 cd /srv/gitbook
@@ -20,7 +22,7 @@ cd /srv/gitbook
 main(){
   gitbook build || ( gitbook install ; gitbook build )
 
-  cp -a _book ../gitbook-src
+  cp -a _book $WORKDIR
   case $1 in
     server )
       exec gitbook serve
