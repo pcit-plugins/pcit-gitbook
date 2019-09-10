@@ -1,4 +1,4 @@
-FROM node:11-alpine
+FROM node:alpine
 
 LABEL maintainer="khs1994@khs1994.com"
 LABEL repository="https://github.com/khs1994-docker/gitbook"
@@ -13,6 +13,7 @@ ENV TZ=Asia/Shanghai
 
 ENV GIT_USERNAME="" \
     GIT_USEREMAIL="" \
+    GIT_TOKEN="" \
     GIT_REPO="" \
     GIT_BRANCH="gh-pages" \
     GIT_COMMIT_MESSAGE="Gitbook updated:"
