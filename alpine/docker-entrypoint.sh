@@ -39,7 +39,7 @@ main(){
       GIT_REPO="https://${GIT_USERNAME}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
       set -x
 
-      cd _book
+      cd _book || exit 1
       git init
       git remote add origin ${GIT_REPO}
       git add .
