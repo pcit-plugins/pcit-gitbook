@@ -54,7 +54,7 @@ $ docker run -it --rm \
     deploy
 ```
 
-## Ations
+## Actions
 
 * https://developer.github.com/actions/
 
